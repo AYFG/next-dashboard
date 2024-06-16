@@ -4,6 +4,7 @@ import clsx from 'clsx';
 export default function InvoiceStatus({ status }: { status: string }) {
   return (
     <span
+      // clsx 클래스 이름을 쉽게 전환 가능한 라이브러리
       className={clsx(
         'inline-flex items-center rounded-full px-2 py-1 text-xs',
         {
