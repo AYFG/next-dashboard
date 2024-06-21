@@ -25,12 +25,12 @@ export async function fetchRevenue() {
     // 데모 목적으로 응답을 인위적으로 지연시킵니다.
     // 프로덕션에서 이 작업을 수행하지 마십시오. :)
 
-    // console.log('Fetching revenue data...');
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
+    console.log('Fetching revenue data...');
+    await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
     // noStore를 사용해 동적 렌더링을 하게 되면 가장 느린 데이터에 맞춰 페이지가 완성된다.
-    // console.log('Data fetch completed after 3 seconds.');
+    console.log('Data fetch completed after 3 seconds.');
 
     return data.rows;
   } catch (error) {
