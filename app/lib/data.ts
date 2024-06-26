@@ -177,7 +177,7 @@ export async function fetchInvoiceById(id: string) {
       // 금액을 센트에서 달러로 변환
       amount: invoice.amount / 100,
     }));
-
+    console.log(invoice);
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
